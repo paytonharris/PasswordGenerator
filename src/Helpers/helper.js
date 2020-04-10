@@ -14,6 +14,20 @@ var getRandomSym = () => {
   return syms[Math.round(Math.random() * (syms.length - 1))];
 }
 
+var verifyPassword = (password) => {
+  for (var i = 0; i < 3; i++) {
+    let occurrences = password.split(password[i]).length - 1;
+
+    console.log(occurrences);
+
+    if (occurrences >= 3) {
+      return false;
+    }
+  }
+
+  return true;
+}
+
 export function getPassword() {
   var password = "";
 
@@ -26,5 +40,9 @@ export function getPassword() {
   password += getRandomChar();
   password += getRandomChar();
 
-  return password;
+  if (!verifyPassword(password)) {
+    return getPassword();
+  } else {
+    return password;
+  }
 }
