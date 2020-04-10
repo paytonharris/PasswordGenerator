@@ -20,7 +20,7 @@ let Styles = {
 export default function Footer() {
   return (
     <div style={Styles.divStyle}>
-      <label style={Styles.titleStyle}>v1.2 | Powered by <a target="_blank" href="https://github.com/paytonharris/PasswordGenerator">Beans</a></label>
+      <label style={Styles.titleStyle}>v1.2.3 | Powered by <a target="_blank" href="https://github.com/paytonharris/PasswordGenerator">Beans</a></label>
     </div>
   );
 }
